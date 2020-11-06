@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "amplifysocialmedia029a45ff": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

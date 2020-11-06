@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GoogleAuth from './GoogleAuth';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 const Header = () => {
     return (
@@ -13,10 +13,10 @@ const Header = () => {
                 <Link to="/" className="item">
                     <h3>Home</h3>
                 </Link>
-                <GoogleAuth />
+                <AmplifySignOut />
             </div>
         </div>
     );
 }
 
-export default Header;
+export default withAuthenticator(Header);
