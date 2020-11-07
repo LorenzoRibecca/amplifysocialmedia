@@ -1,7 +1,7 @@
 type Blog @model {
   id: ID!
   name: String!
-  posts: [Post] @connection(name: "byBlog", keyFields: ["id"])
+  posts: [Post] @connection(name: "byBlog", keyField: ["id"])
   image: String
 }
 
@@ -9,15 +9,15 @@ type Post @model @key(name: "byBlog", fields: ["blogID"]) {
   id: ID!
   title: String!
   blogID: ID!
-  blog: Blog @connection(keyFields: ["blogID"])
-  comments: [Comment] @connection(keyName: "byPost", keyFields: ["id"])
+  blog: Blog @connection(keyField: ["blogID"])
+  comments: [Comment] @connection(keyName: "byPost", keyField: ["id"])
   image: String
 }
 
 type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
   id: ID!
   postID: ID!
-  post: Post @connection(keyFields: ["postID"])
+  post: Post @connection(keyField: ["postID"])
   content: String!
   image: String
 }
