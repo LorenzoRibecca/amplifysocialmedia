@@ -11,11 +11,13 @@ export const getBlog = /* GraphQL */ `
           id
           title
           blogID
+          image
           createdAt
           updatedAt
         }
         nextToken
       }
+      image
       createdAt
       updatedAt
     }
@@ -34,6 +36,7 @@ export const listBlogs = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -53,6 +56,7 @@ export const getPost = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -61,11 +65,13 @@ export const getPost = /* GraphQL */ `
           id
           postID
           content
+          image
           createdAt
           updatedAt
         }
         nextToken
       }
+      image
       createdAt
       updatedAt
     }
@@ -85,12 +91,14 @@ export const listPosts = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }
         comments {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -110,16 +118,19 @@ export const getComment = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }
         comments {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
       content
+      image
       createdAt
       updatedAt
     }
@@ -139,10 +150,12 @@ export const listComments = /* GraphQL */ `
           id
           title
           blogID
+          image
           createdAt
           updatedAt
         }
         content
+        image
         createdAt
         updatedAt
       }
